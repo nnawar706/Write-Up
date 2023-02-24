@@ -11,7 +11,7 @@ const generateParagraph = async ({
                 method: "POST",
                 headers: { 
                     "Content-Type": "application/json",
-                    "Authorization": "Bearer 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"
+                    "Authorization": ${{ secrets.SECRET_KEY }}
                 },
                 body: JSON.stringify({
                     prompt: `Write a ${numWords || 200} word paragraph on ${paragraphTitle} in a ${mode || "normal"} tone. ${keywords ? `Incorporate the following keywords: ${keywords}.` : ""}`,
